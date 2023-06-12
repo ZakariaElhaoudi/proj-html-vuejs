@@ -28,51 +28,51 @@ export default {
             listImg: [
                 {
                     link: '#',
-                    img: 'SEM PORTA MOLLIS PARTURIENT',
+                    img: '/img/photodune-6745579-modern-creative-man-relaxing-on-workspace-.jpg',
                 },
                 {
                     link: '#',
-                    img: 'NULLAM LOREM MATTIS PURUS',
+                    img: '/img/photodune-6745585-modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'SEM PORTA MOLLIS PARTURIENT',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'NULLAM LOREM MATTIS PURUS',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'SEM PORTA MOLLIS PARTURIENT',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'SEM PORTA MOLLIS PARTURIENT',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'NULLAM LOREM MATTIS PURUS',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'SEM PORTA MOLLIS PARTURIENT',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'NULLAM LOREM MATTIS PURUS',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'SEM PORTA MOLLIS PARTURIENT',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'NULLAM LOREM MATTIS PURUS',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: 'SEM PORTA MOLLIS PARTURIENT',
+                    img: '/img/modern-creative-workspace-m-150x150.jpg',
                 },
             ]
         }
@@ -118,9 +118,9 @@ export default {
                 </div>
 
                 <div class="col-3">
-                    <h5><a href="#"> GET YOUR SEAT!</a></h5>
-                    <ul>
-                        <li v-for="img in listImg"><a :href="#"><img src="/" alt=""></a></li>
+                    <h5><a href="#"> GALLERY FROM LAST YEAR</a></h5>
+                    <ul class="d-flex flex-wrap-wrap">
+                        <li v-for="img in listImg"><a :href="img.link"><img :src="img.img" alt=""></a></li>
                     </ul>
                 </div>
             </div>
