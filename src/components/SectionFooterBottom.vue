@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppMain',
+    name: 'SectionFooterBottom',
     data() {
         return {
         }
@@ -13,4 +13,5 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/mixins.scss' as *;
+@use '../styles/general.scss' as *;
 </style>

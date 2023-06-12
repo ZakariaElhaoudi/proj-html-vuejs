@@ -1,7 +1,7 @@
 <script>
 import HeaderNavBar from './HeaderNavBar.vue'
 export default {
-    name: 'AppHeader',
+    name: 'PageHeader',
     components: {
         HeaderNavBar,
     },
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-    <header class="container d-flex ">
+    <header class="container d-flex justify-content-between align-items-center h-80px">
         <div>
             <h2><a href="#"> THE KEYNOTE</a></h2>
         </div>
@@ -62,11 +62,16 @@ export default {
 
         </div>
     </header>
-    <section class="jumbotron d-flex flex-column justife-content-between align-items-center">
+    <section class="jumbotron">
         <div class="container">
-            <h1><a href="#">CONFERENCE ON <strong>SOCIAL NETWORKS</strong></a></h1>
-            <div class="conference-date">
+            <h1><a href="#">CONFERENCE ON <br>
+                    <strong>SOCIAL NETWORKS</strong></a>
+            </h1>
+            <div class="conference-date my-3">
                 <a href="">23-26 MAY 2019 </a> <a href="#"> / SANS FRANCISCO </a> <a href="#"> / 8 SPEAKERS</a>
+            </div>
+            <div>
+                <button class="btn btn-danger my-3">REGISTER ONLINE</button>
             </div>
 
         </div>
@@ -78,24 +83,29 @@ export default {
 @use '../styles/partials/mixins.scss' as *;
 @use '../styles/general.scss' as *;
 
+header {
+    height: 80px;
 
-h2 {
-    font-weight: 900;
+    h2 {
+        font-weight: 900;
+    }
+
+    ul,
+    .search {
+        @include center(both);
+        margin: 0.5rem 1rem;
+
+    }
+
+    .fa-solid {
+        border-left: solid 1px black;
+        padding-left: 2rem;
+    }
 }
 
-ul,
-.search {
-    @include center(both);
-    margin: 0.5rem 1rem;
-
-}
-
-.fa-solid {
-    border-left: solid 1px black;
-    padding-left: 2rem;
-}
 
 .jumbotron {
+    @include center(both);
     text-align: center;
     background-image: url("../assets/slider-1-bg.jpg");
     height: 300px;
