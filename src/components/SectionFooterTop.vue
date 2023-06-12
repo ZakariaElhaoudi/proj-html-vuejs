@@ -36,43 +36,43 @@ export default {
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-7770665-two-white-coffee-mug-with-diy-decoration-o (1).jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-8522811-speaker-at-business-conference-and-present (1).jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-8523683-speaker-at-business-convention-and-present.jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-8795110-overhead-of-essentials-denim-clothes-m-150.jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-8797753-multiethnic-people-with-startup-business-t (1).jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-8523683-speaker-at-business-convention-and-present.jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-7770665-two-white-coffee-mug-with-diy-decoration-o (1).jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-6745585-modern-creative-workspace-m-150x150.jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-6745579-modern-creative-man-relaxing-on-workspace-.jpg',
                 },
                 {
                     link: '#',
-                    img: '/img/modern-creative-workspace-m-150x150.jpg',
+                    img: '/img/photodune-8797753-multiethnic-people-with-startup-business-t (1).jpg',
                 },
             ]
         }
@@ -82,7 +82,7 @@ export default {
 
 <template>
     <section class="container-fluid bg-dark">
-        <div class="container">
+        <div class="container py-2">
             <div class="row">
                 <div class="col-3">
                     <h5><a href="#"> ABOUT US</a></h5>
@@ -113,14 +113,16 @@ export default {
                     <h5><a href="#"> GET YOUR SEAT!</a></h5>
                     <p>Book for your seat before it's too rate. We provide variety of ticket options.</p>
                     <div>
-                        <button class="btn btn-danger">CHECK OUT TICKETS!</button>
+                        <button class="btn btn-danger my-3">CHECK OUT TICKETS!</button>
                     </div>
                 </div>
 
                 <div class="col-3">
                     <h5><a href="#"> GALLERY FROM LAST YEAR</a></h5>
-                    <ul class="d-flex flex-wrap-wrap">
-                        <li v-for="img in listImg"><a :href="img.link"><img :src="img.img" alt=""></a></li>
+                    <ul class="d-flex flex-wrap">
+                        <li class="container_img py-1 px-1" v-for="img in listImg"><a :href="img.link"><img :src="img.img"
+                                    alt=""></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -135,7 +137,14 @@ export default {
 
 section {
 
+    .container_img {
+        width: calc(100% / 4);
+    }
+
+
     .icon {
+        padding: 2rem 0;
+
         ul {
             @include center(both);
             margin: 0.5rem 1rem;
@@ -158,8 +167,11 @@ section {
     }
 
     h5 {
+        padding: 2rem 0;
+
         a {
             color: white;
+
         }
     }
 }
