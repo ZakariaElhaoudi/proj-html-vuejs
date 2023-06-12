@@ -1,6 +1,10 @@
 <script>
+import SectionCountDown from './SectionCountDown.vue'
 export default {
     name: 'PageMain',
+    components: {
+        SectionCountDown
+    },
     data() {
         return {
         }
@@ -8,7 +12,9 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <SectionCountDown />
+</template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
