@@ -1,9 +1,11 @@
 <script>
 import SectionCountDown from './SectionCountDown.vue'
+import SectionSpeakers from './SectionSpeakers.vue'
 export default {
     name: 'PageMain',
     components: {
-        SectionCountDown
+        SectionCountDown,
+        SectionSpeakers
     },
     data() {
         return {
@@ -14,6 +16,7 @@ export default {
 
 <template>
     <SectionCountDown />
+    <SectionSpeakers />
 </template>
 
 <style lang="scss" scoped>
