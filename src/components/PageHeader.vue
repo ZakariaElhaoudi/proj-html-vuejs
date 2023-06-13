@@ -1,9 +1,11 @@
 <script>
+import SectionWhoWeAre from './SectionWhoWeAre.vue'
 import HeaderNavBar from './HeaderNavBar.vue'
 export default {
     name: 'PageHeader',
     components: {
         HeaderNavBar,
+        SectionWhoWeAre,
     },
     data() {
         return {
@@ -76,6 +78,7 @@ export default {
 
         </div>
     </section>
+    <SectionWhoWeAre />
 </template>
 
 <style lang="scss" scoped>
@@ -108,6 +111,8 @@ header {
     @include center(both);
     text-align: center;
     background-image: url("../assets/slider-1-bg.jpg");
+    background-position: center;
+    background-size: cover;
     height: 300px;
 
     a {
