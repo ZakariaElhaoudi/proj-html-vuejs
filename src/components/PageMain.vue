@@ -3,13 +3,15 @@ import SectionCountDown from './SectionCountDown.vue'
 import SectionSpeakers from './SectionSpeakers.vue'
 import SectionProgram from './SectionProgram.vue'
 import SectionMaps from './SectionMaps.vue'
+import SectionLocation from './SectionLocation.vue'
 export default {
     name: 'PageMain',
     components: {
         SectionCountDown,
         SectionSpeakers,
         SectionProgram,
-        SectionMaps
+        SectionMaps,
+        SectionLocation
     },
     data() {
         return {
@@ -23,6 +25,7 @@ export default {
     <SectionSpeakers />
     <SectionProgram />
     <SectionMaps />
+    <SectionLocation />
 </template>
 
 <style lang="scss" scoped>
