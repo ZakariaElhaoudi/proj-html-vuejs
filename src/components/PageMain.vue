@@ -2,12 +2,14 @@
 import SectionCountDown from './SectionCountDown.vue'
 import SectionSpeakers from './SectionSpeakers.vue'
 import SectionProgram from './SectionProgram.vue'
+import SectionMaps from './SectionMaps.vue'
 export default {
     name: 'PageMain',
     components: {
         SectionCountDown,
         SectionSpeakers,
-        SectionProgram
+        SectionProgram,
+        SectionMaps
     },
     data() {
         return {
@@ -20,6 +22,7 @@ export default {
     <SectionCountDown />
     <SectionSpeakers />
     <SectionProgram />
+    <SectionMaps />
 </template>
 
 <style lang="scss" scoped>
