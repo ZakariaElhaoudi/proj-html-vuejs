@@ -17,7 +17,7 @@ export default {
                     link: 'Learn More',
                 },
                 {
-                    icon: '<fa-solid fa-question',
+                    icon: 'fa-solid fa-question',
                     title: 'WHY US',
                     text: 'Laudantium inventore necessitatibus, praesentium omnis temporibus vel debitis',
                     link: 'Learn More',
