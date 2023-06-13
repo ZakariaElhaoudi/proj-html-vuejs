@@ -46,7 +46,7 @@ export default {
                 <div v-for="speaker in listSpeakers" class="col-3 text-center ">
                     <img :src="speaker.img" :alt="speaker.name">
                     <h6>{{ speaker.name }}</h6>
-                    <P>{{ speaker.task }}</P>
+                    <p>{{ speaker.task }}</p>
                 </div>
             </div>
         </div>

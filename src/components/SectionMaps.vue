@@ -1,28 +1,41 @@
 <script>
-import { computed } from "vue";
-import { useGeolocation } from "../useGeolocation";
+import L from "leaflet";
+
 export default {
     name: 'SectionMaps',
+
     data() {
-        const { coords } = useGeolocation()
-        const currPos = computed(() => ({
-            lat: coords.value.latitude,
-            lng: coords.value.longitude
-        }))
-        return {
-            currPos
+        address: "Via Roma 123, Milano, Italia"
+    },
+    methods: {
+        initializeMap() {
+            const map = L.map("map").setView([0, 0], 13);
+
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution: "© OpenStreetMap contributors",
+                maxZoom: 19
+            }).addTo(map);
+
+            const geocoder = L.Control.Geocoder.nominatim();
+
+            geocoder.geocode(this.address, (results) => {
+                if (results.length > 0) {
+                    const location = results[0].center;
+                    map.setView(location, 13);
+                    L.marker(location).addTo(map);
+                }
+            });
         }
+    },
+    mounted() {
+        this.initializeMap();
     },
 }
 </script>
 
 <template>
-    <section class="container-fluid bg-light">
-        <div class="m-auto">
-            <h4>Your Position</h4>
-            Latitude: {{ currPos.lat.toFixed(2) }},
-            Longitude: {{ currPos.lng.toFixed(2) }}
-        </div>
+    <section>
+        <div id="map"></div>
     </section>
 </template>
 
@@ -31,7 +44,7 @@ export default {
 @use '../styles/partials/mixins.scss' as *;
 @use '../styles/general.scss' as *;
 
-.m-auto {
+#map {
     height: 400px;
     width: 100%;
 }
