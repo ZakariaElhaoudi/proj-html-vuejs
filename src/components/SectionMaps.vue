@@ -1,11 +1,13 @@
 <script>
 import L from "leaflet";
-
+import "leaflet-control-geocoder";
 export default {
     name: 'SectionMaps',
 
     data() {
-        address: "Via Roma 123, Milano, Italia"
+        return {
+            address: "Via Roma 100, Palermo, Italia"
+        }
     },
     methods: {
         initializeMap() {
