@@ -7,6 +7,7 @@ import SectionLocation from './SectionLocation.vue'
 import SectionRecentNews from './SectionRecentNews.vue'
 import SectionTickets from './SectionTickets.vue'
 import SectionPresentation from './SectionPresentation.vue'
+import SectionSponsors from './SectionSponsors.vue'
 export default {
     name: 'PageMain',
     components: {
@@ -18,6 +19,7 @@ export default {
         SectionRecentNews,
         SectionTickets,
         SectionPresentation,
+        SectionSponsors,
     },
     data() {
         return {
@@ -35,6 +37,7 @@ export default {
     <SectionRecentNews />
     <SectionTickets />
     <SectionPresentation />
+    <SectionSponsors />
 </template>
 
 <style lang="scss" scoped>
