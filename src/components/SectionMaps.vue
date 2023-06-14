@@ -6,7 +6,7 @@ export default {
 
     data() {
         return {
-            address: "Via Roma 100, Palermo, Italia"
+            address: "1000 5th Ave, New York, NY 10028, Stati Uniti"
         }
     },
     methods: {
