@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gasoek+One&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-// body {
-//     font-family: 'Courier New', Courier, monospace;
-// }
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Gasoek One', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 img {
     max-width: 100%;

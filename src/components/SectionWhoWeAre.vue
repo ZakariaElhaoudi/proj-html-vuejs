@@ -30,18 +30,19 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="d-flex" v-for="data in listData">
-            <i :class="data.icon"></i>
-            <div>
-                <h5>{{ data.title }}</h5>
-                <p>{{ data.text }}</p>
-                <a href="#">{{ data.link }}</a>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="d-flex" v-for="data in listData">
+                <i :class="data.icon"></i>
+                <div>
+                    <h5>{{ data.title }}</h5>
+                    <p>{{ data.text }}</p>
+                    <a href="#">{{ data.link }}</a>
+                </div>
+
             </div>
-
         </div>
-
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
